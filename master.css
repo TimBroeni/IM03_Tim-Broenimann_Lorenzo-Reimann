@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --primary: #52A535;
+    --secondary:  #2B641C;
+    --shade:#3D3938;
+    --background:#171615;
+
+}
+
+
+body{
+    background-color: var(--background);
+}
+
+
+h1 {
+color: white;
+text-align: center;
+font-family: "Minecrafter Alt";
+font-size: 128px;
+font-weight: 400;
+}
+
+
+h2{
+color: white;
+font-family: "Noto Sans";
+font-size: 48px;
+text-align: center;
+}
+
+
+
+
+
+main {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
