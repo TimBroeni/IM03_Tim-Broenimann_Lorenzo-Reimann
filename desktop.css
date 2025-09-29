@@ -4,16 +4,37 @@
 
   /**======================TITLE======================**/
     h1{
-        margin: 200px 0 36px 0;
+        margin: 5vw 0 20px;
     }
 
   /**======================SUBTITLE======================**/
-    .aktiveSpielerOnline{
+    #aktiveSpielerOnline{
         color: var(--primary);
     }
 
   /**======================GRAPH======================**/
+    #mainPart{
+        width: 69%; /* Define a width for centering */
+        margin: 80px auto 0px;
+    }
 
+  
+    #mainChart{
+        border: 10px solid var(--third);
+        border-radius: 45px;
+        height: 100px;
+        width: 850px;
+        height: 350px;
+        width: 100%;
+
+    }
+
+    #capacitypercent{
+        text-align: left;
+    }
+
+
+    
 
   /**======================DESCRIPTION GRAPH======================**/
 

@@ -7,6 +7,7 @@
 :root{
     --primary: #52A535;
     --secondary:  #2B641C;
+    --third: #3C8526;
     --shade:#3D3938;
     --background:#171615;
 
@@ -32,10 +33,40 @@ color: white;
 font-family: "Noto Sans";
 font-size: 48px;
 text-align: center;
+font-weight: 700;
+}
+
+h3{
+color: var(--secondary);
+font-family: "Noto Sans";
+font-size: 32px;
+font-weight: 700;
 }
 
 
+h4{
+color: white;
+font-family: "Noto Sans";
+font-size: 24px;
+text-align: center;
+}
 
+p{
+color: #FFF;
+font-family: "Noto Sans";
+font-size: 16px;
+font-weight: 700;
+text-align: center;
+margin-top: 25px;
+}
+
+footer{
+    background-color: var(--shade);
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 
 main {
