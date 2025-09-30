@@ -17,53 +17,59 @@
 
 </head>
     <header>
-        <p id="istDerServerAktiv">Active</p>
+        <div id="istServerAktiv">
+            <img id="imgServerAktivität" src="images/Emerald_Block.png" alt="ServerAktivität">
+            <p id="stringServerAktivität">Active</p>
+        </div>
+        <img id="logoServer" src="images/Logo_GOMMEHD.png" alt="Logo">
     </header>
     <body>
         <main>
             <h1 id="servername">
                 GOMMEHD.NET
             </h1>
-
             <h2>
                 <span id="aktiveSpielerOnline">1076 </span>
                 <span id="totaleSpielerMöglich">/ 10000</span>
             </h2>
-
             <h4>
                 Players
             </h4>
 
-            <div id="graphenTotal">
-                <div id="leerLassen">
-            
-                </div>
-                <div id="mainPart">
-                    <div id="mainChart">
-                        
-                    </div>
 
-                    <div id="currentcapacity">
-                        <h3 id="stringcurrentCapacity">
+            <div id="graphenTotal">
+                <div id="leerLassen"></div>
+                <div id="mainPart">
+                    <div id="mainChart"></div>
+                    <div id="currentCapacity">
+                        <h3 id="stringCurrentCapacity">
                             Current capacity
                         </h3>
-
-                        <h4 id="capacitypercent">
+                        <h4 id="capacityPercent">
                             11%
                         </h4>
                     </div>
                 </div>
                 <div id="graphenSide">
                     <div id="BoxSideChartONE">
-                        <p class="titleChartSide">Hypixel</p>
+                        <div class="textChartSide">
+                            <p class="titleChartSide">Hypixel</p>
+                            <p class="verhältnisPlayersPLUS"> + 1430 Players</p>
+                        </div>
                         <div id="sideChartONE"></div>
                     </div>
                     <div id="BoxsideChartTWO">
-                        <p class="titleChartSide">Mineplex</p>
+                        <div class="textChartSide">
+                            <p class="titleChartSide">Mineplex</p>
+                            <p class="verhältnisPlayersPLUS"> + 3193 Players</p>
+                        </div>
                         <div id="sideChartTWO"></div>
                     </div>
                     <div id="BoxSideChartTHREE">
-                        <p class="titleChartSide">The Hive</p>
+                        <div class="textChartSide">
+                            <p class="titleChartSide">The Hive</p>
+                            <p class="verhältnisPlayersMINUS"> - 10930 Players</p>
+                        </div>
                         <div id="sideChartTHREE"></div>
                     </div>
                 </div>

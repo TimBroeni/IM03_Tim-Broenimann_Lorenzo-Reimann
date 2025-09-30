@@ -23,7 +23,7 @@ h1 {
 color: white;
 text-align: center;
 font-family: "Minecrafter Alt";
-font-size: 128px;
+font-size: 120px;
 font-weight: 400;
 }
 
@@ -57,7 +57,6 @@ font-family: "Noto Sans";
 font-size: 16px;
 font-weight: 700;
 text-align: center;
-margin-top: 25px;
 }
 
 footer{
@@ -70,7 +69,7 @@ footer{
 
 
 main {
-  width: 90vw;
+  width: 95vw;
   max-width: 1300px;
   margin: 0 auto;
 }
