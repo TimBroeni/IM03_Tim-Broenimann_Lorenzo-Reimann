@@ -1,15 +1,25 @@
 @media (min-width: 1024px) {  
   /**======================HEADER======================**/
+    #header{
+      display: flex;
+    }
+
+    #servernameUndAktivität{
+      columns: ;
+      flex: 1;
+      margin-right: 300px;
+    }
+  
     #logoServer{
-      height: 150px;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 200px;
+      object-fit: contain;
+      margin: 60px 0 0 60px;
     }
 
     #istServerAktiv{
       text-align: center;
       margin-top: 25px;
+      flex: 1;
     }
 
     #imgServerAktivität{
@@ -57,6 +67,10 @@
     
 
   /**======================SIDE GRAPH======================**/
+    #graphenTotal{
+      margin-bottom: 50px;
+    }
+  
     #graphenSide{
         display: flex;
         flex-direction: column;
@@ -122,7 +136,10 @@
     }
 
   /**======================FOOTER======================**/
-    #lustigeBeschreibungAktivität{
+    
+  
+
+  #inhaltFooter{
         margin-top: 25px;
     }
 
@@ -130,3 +147,18 @@
 
 
 }
+
+
+/* @media (max-width: 1529px) { 
+    h1{
+        font-size: 80px;
+    }
+
+    #logoServer{
+      width: 100px;
+      margin: 40px 0 0 40px;
+    }
+
+  }
+
+   */

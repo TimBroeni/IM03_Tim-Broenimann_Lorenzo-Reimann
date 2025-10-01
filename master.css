@@ -62,8 +62,9 @@ text-align: center;
 footer{
     background-color: var(--shade);
     height: 75px;
-    position: absolute;
-    bottom: 0;
+    
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
 }
 
