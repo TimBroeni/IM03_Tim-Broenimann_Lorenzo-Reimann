@@ -23,7 +23,7 @@ h1 {
 color: white;
 text-align: center;
 font-family: "Minecrafter Alt";
-font-size: 120px;
+font-size: clamp(42px, 9vw, 120px);
 font-weight: 400;
 }
 
@@ -61,16 +61,22 @@ text-align: center;
 
 footer{
     background-color: var(--shade);
-    height: 75px;
-    
-    /* position: absolute;
-    bottom: 0; */
+    /* height: 75px; */
+    height: 8vh;
     width: 100%;
+
 }
 
+header{
+  height: 30vh;
+  width: 95vw;
+  max-width: 1500px;
+  margin: 0 auto;
+}
 
 main {
   width: 95vw;
-  max-width: 1300px;
+  max-width: 1500px;
   margin: 0 auto;
+  height: 62vh;
 }
