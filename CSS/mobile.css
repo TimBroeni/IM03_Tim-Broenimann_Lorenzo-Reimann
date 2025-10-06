@@ -1,3 +1,5 @@
+  
+@media (max-width: 1024px) { 
   /**======================HEADER======================**/
       #header{
       display: flex;
@@ -20,7 +22,6 @@
     #imgServerAktivität{
         position: relative;
         top: 10px;
-        /*right: 10px;*/
         height: 6vw;
         object-fit: contain;
         top: 15px;
@@ -52,12 +53,6 @@
       display: block;
     }
 
-
-    /*#servernameUndAktivität{
-      columns: ;
-      flex: 1;
-      margin-right: 300px;
-    }*/
 
     #istServerAktiv{
       text-align: center;
@@ -95,3 +90,4 @@
 
 
 
+  }
