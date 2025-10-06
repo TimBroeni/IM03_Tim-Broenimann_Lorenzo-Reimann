@@ -1,0 +1,164 @@
+@media (min-width: 1024px) {  
+  /**======================HEADER======================**/
+    #header{
+      display: flex;
+    }
+
+    #servernameUndAktivität{
+      columns: ;
+      flex: 1;
+      margin-right: 300px;
+    }
+  
+    #logoServer{
+      width: 200px;
+      object-fit: contain;
+      margin: 60px 0 0 60px;
+    }
+
+    #istServerAktiv{
+      text-align: center;
+      margin-top: 25px;
+      flex: 1;
+    }
+
+    #imgServerAktivität{
+        height: 68px;
+    }
+
+
+  /**======================TITLE======================**/
+    h1{
+        margin: 40px 0 20px;
+    }
+
+  /**======================SUBTITLE======================**/
+    #aktiveSpielerOnline{
+        color: var(--primary);
+    }
+
+  /**======================GRAPH======================**/
+    #graphenTotal{
+        display: grid;
+        grid-template-columns: 22% 46% 22%;
+        gap: 5%;
+  } 
+  
+    #mainPart{
+        width: 100%;
+        margin: 70px auto 0px;
+    }
+  
+    #mainChart{
+        border: 10px solid var(--third);
+        border-radius: 45px;
+        height: 300px;
+    }
+
+    #currentCapacity{
+        margin-left: 10px;
+    }
+
+    #capacityPercent{
+        text-align: left;
+    }
+
+
+    
+
+  /**======================SIDE GRAPH======================**/
+    #graphenTotal{
+      margin-bottom: 50px;
+    }
+  
+    #graphenSide{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        padding: 22px 0 58px;
+    }
+
+    .textChartSide{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0px 8px 3px;
+    }
+
+    .titleChartSide{
+      flex: 1;
+      text-align: left;
+    }
+
+    .verhältnisPlayersPLUS{
+      color: var(--primary);
+    }
+
+    .verhältnisPlayersMINUS{
+      color: red;
+    }
+  
+    #BoxSideChartONE{
+
+    }
+
+    #sideChartONE{
+        border: 6px solid var(--third);
+        border-radius: 14px;
+        height: 80px;
+        width: 100%;
+        justify-self: end;
+    }
+
+    #BoxSideChartTWO{
+
+    }
+
+    #sideChartTWO{
+        border: 6px solid var(--third);
+        border-radius: 14px;
+        height: 80px;
+        width: 100%;
+        justify-self: end;
+    }
+
+    #BoxSideChartTHREE{
+
+    }
+
+    #sideChartTHREE{
+        border: 6px solid var(--third);
+        border-radius: 14px;
+        height: 80px;
+        width: 100%;
+        justify-self: end;
+    }
+
+  /**======================FOOTER======================**/
+    
+  
+
+  #inhaltFooter{
+        margin-top: 25px;
+    }
+
+  /**======================BACKGROUND======================**/
+
+
+}
+
+
+/* @media (max-width: 1529px) { 
+    h1{
+        font-size: 80px;
+    }
+
+    #logoServer{
+      width: 100px;
+      margin: 40px 0 0 40px;
+    }
+
+  }
+
+   */
