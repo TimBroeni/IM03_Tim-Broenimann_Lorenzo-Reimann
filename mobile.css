@@ -1,6 +1,70 @@
-  /**======================HEADER======================**/
+/**======================HEADER======================**/
+    #header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-  
+    #divHeader{
+      width: 100vw;
+    }
+
+        #istServerAktiv{
+      position: absolute;
+      display: flex;
+      flex-direction: row-reverse;
+      top: 10px;
+      right: 25px;
+    }
+
+    #imgServerAktivität{
+        position: relative;
+        top: 10px;
+        /*right: 10px;*/
+        height: 6vw;
+        object-fit: contain;
+        top: 15px;
+    }
+
+        #stringServerAktivität{
+      text-align: right;
+      font-size: 3vw;
+      margin: 10px 0 30px 0;
+      color: white;
+      font-family: "Noto Sans";
+      font-weight: 700;
+    }
+
+    #servername{
+      font-size: 10vw;
+      text-align: center;
+      margin: 10px 0 0 0;
+      color: var(--primary);
+      font-weight: bold;
+      color: white;
+      font-family: "Minecrafter Alt";
+    }
+
+        #logoServer{
+      width: 20vw;
+      object-fit: contain;
+      margin: 60px auto 0 auto;
+      display: block;
+    }
+
+
+    /*#servernameUndAktivität{
+      columns: ;
+      flex: 1;
+      margin-right: 300px;
+    }*/
+
+    #istServerAktiv{
+      text-align: center;
+      margin-top: 25px;
+      flex: 1;
+    }
+
 
 
   /**======================TITLE======================**/
