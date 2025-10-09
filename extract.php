@@ -1,14 +1,14 @@
 <?php
 function fetchServerData(){
     $urls = [
-        "https://mcapi.us/server/status?ip=mc.hypixel.net",
-        "https://mcapi.us/server/status?ip=mineplex.com",
-        "https://mcapi.us/server/status?ip=play.manacube.com",
-        "https://mcapi.us/server/status?ip=gommehd.net"
+       1 => "https://mcapi.us/server/status?ip=gommehd.net",
+       2 => "https://mcapi.us/server/status?ip=mc.hypixel.net",
+       3 => "https://mcapi.us/server/status?ip=mineplex.com",
+       4 => "https://mcapi.us/server/status?ip=play.manacube.com"
     ];
 
     $results = [];
-    foreach ($urls as $url) {
+    foreach ($urls as $id => $url) {
         // Initialisiert eine cURL-Sitzung - Verbindung zum Server aufbauen
         $ch = curl_init($url);
 
@@ -28,8 +28,11 @@ function fetchServerData(){
         // Schließt die cURL-Sitzung
         curl_close($ch);
 
+
         // Dekodiert die JSON-Antwort und speichert sie im Ergebnis-Array
-        $results[] = json_decode($response, true);
+        $server = json_decode($response, true);
+        $server['id'] = $id; // Fügt die ID hinzu
+        $results[] = $server;
     }
 
     return $results;
