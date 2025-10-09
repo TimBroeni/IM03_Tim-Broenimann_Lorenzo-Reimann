@@ -37,6 +37,7 @@
 
     #servername{
       font-size: 10vw;
+      align-content: center;
       text-align: center;
       margin: 10px 0 0 0;
       color: var(--primary);
@@ -63,7 +64,13 @@
 
   /**======================TITLE======================**/
 
-
+    #servernameUndAktivität{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px 0 20px;
+    }
 
   /**======================SUBTITLE======================**/
 
@@ -71,9 +78,8 @@
 
   /**======================GRAPH======================**/
     #graphenTotal{
-      display: block; /* or flex, or whatever you want for mobile */
-      grid-template-columns: unset; /* optional: removes grid columns */
-      gap: unset; /* optional: removes grid gap */
+      display: block;
+      margin: 0 80px 0 80px;
   }
 
 
