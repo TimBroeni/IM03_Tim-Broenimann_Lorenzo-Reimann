@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IM03</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="description" content="Hier findest du Dein passensten MC Server">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://webfonts.ffonts.net/Minecrafter-Alt.font">
@@ -42,13 +43,13 @@
                 Players
             </h4>
 
-            <canvas id="serverChart"></canvas>
-
 
             <div id="graphenTotal">
                 <div id="leerLassen"></div>
                 <div id="mainPart">
-                    <div id="mainChart"></div>
+                    <div id="mainChart">
+                        <canvas id="apiChart"></canvas>
+                    </div>
                     <div id="currentCapacity">
                         <h3 id="stringCurrentCapacity">
                             Current capacity

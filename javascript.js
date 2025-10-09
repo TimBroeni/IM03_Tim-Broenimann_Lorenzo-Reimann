@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-        console.log("Abgerufene Daten:", data); // Loggt die abgerufenen Daten zur Überprüfung
+        console.log("Abgerufene Daten:", data); // Zeigt die abgerufenen Daten bei der Konsole an
 
 
-
-      const ctx = document.getElementById("serverChart").getContext("2d");
+// hier wird das Diagramm erstellt...
+      const ctx = document.getElementById("apiChart").getContext("2d");
       const datasets = Object.keys(data).map((city) => ({
         label: city,
         data: data[city].map((item) => item.temperature_celsius),
