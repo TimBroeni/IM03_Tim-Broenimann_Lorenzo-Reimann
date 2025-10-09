@@ -46,6 +46,11 @@
         color: var(--primary);
     }
 
+    #playerCount{
+        display: flex;
+        align-items: center;
+    }
+
   /**======================GRAPH======================**/
     #graphenTotal{
         display: grid;
