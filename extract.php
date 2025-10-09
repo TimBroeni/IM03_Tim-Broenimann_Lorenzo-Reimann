@@ -35,18 +35,7 @@ function fetchServerData(){
     return $results;
 }
 
-    // array erstellen mit allen 4 api's drin (unterschiedliche endungen)
 
-echo '<pre>';
-print_r(fetchServerData());
-echo '</pre>';
-
-
-
-
-// [
-//         "https://mcapi.us/server/status?ip=mc.hypixel.net",
-//         "https://mcapi.us/server/status?ip=mineplex.com",
-//         "https://mcapi.us/server/status?ip=play.manacube.com",
-//         "https://mcapi.us/server/status?ip=gommehd.net"
-//     ];
+// echo '<pre>';
+// print_r(fetchServerData());
+// echo '</pre>';
