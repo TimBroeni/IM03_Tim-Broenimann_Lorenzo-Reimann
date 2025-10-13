@@ -6,6 +6,12 @@
       justify-content: center;
     }
 
+    header {
+      margin-top: -32vh;
+      position: relative;
+      z-index: 2;
+    }
+
     #divHeader{
       width: 100vw;
     }
@@ -48,17 +54,17 @@
       margin-bottom: 2vw;
     }
 
-        #logoServer{
+    #logoServer{
       width: 20vw;
       object-fit: contain;
-      margin: 60px auto 0 auto;
+      margin: 22vw auto 0 auto;
       display: block;
     }
 
 
     #istServerAktiv{
       text-align: center;
-      margin-top: 6vw;
+      margin-top: 2vw;
       flex: 1;
     }
   
@@ -93,13 +99,24 @@
     #totaleSpielerMöglich{
         font-size: 6vw;
     }
+
+    h3{
+      font-size: 6vw;
+    }
+
+    h4{
+      font-size: 4vw;
+    }
   /**======================GRAPH======================**/
     #graphenTotal{
       display: block;
       margin: 0 3vw;
   }
 
-
+  #mainChart{
+    border: 1vw solid var(--third);
+    height: clamp(200px, 50vw, 600px);
+  }
 
   /**======================SIDE GRAPH======================**/
 
@@ -110,13 +127,14 @@
     /**======================BACKGROUND======================**/
 
   #mobileTopBox {
-    position: fixed;
+    z-index: 1;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
     background-color: #3D3938;
     z-index: -1;
-    height: clamp(97px, 20vw, 1024px);
+    height: clamp(47px, 30vw, 1354px);
     border-radius: 0;
     margin: 0;
     pointer-events: none; /* Prevents blocking interactions below */
