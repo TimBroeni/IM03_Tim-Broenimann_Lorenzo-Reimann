@@ -123,39 +123,39 @@
     }
   
     #BoxSideChartONE{
-
+      border: 6px solid var(--third);
+      border-radius: 14px;
+      height: 80px;
+      width: 100%;
+      justify-self: end;
     }
 
     #sideChartONE{
-        border: 6px solid var(--third);
-        border-radius: 14px;
-        height: 80px;
-        width: 100%;
-        justify-self: end;
+
     }
 
     #BoxSideChartTWO{
-
+      border: 6px solid var(--third);
+      border-radius: 14px;
+      height: 80px;
+      width: 100%;
+      justify-self: end;
     }
 
     #sideChartTWO{
-        border: 6px solid var(--third);
-        border-radius: 14px;
-        height: 80px;
-        width: 100%;
-        justify-self: end;
+
     }
 
     #BoxSideChartTHREE{
-
+      border: 6px solid var(--third);
+      border-radius: 14px;
+      height: 80px;
+      width: 100%;
+      justify-self: end;
     }
 
     #sideChartTHREE{
-        border: 6px solid var(--third);
-        border-radius: 14px;
-        height: 80px;
-        width: 100%;
-        justify-self: end;
+
     }
 
   /**======================FOOTER======================**/
