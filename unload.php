@@ -21,7 +21,17 @@ header('Content-Type: application/json');
 try {
     $pdo = new PDO($dsn, $username, $password, $options);
 
-    $sql = "SELECT * FROM AutomatischeDaten";
+    $sql = "
+        SELECT 
+            a.*, 
+            m.nameServer
+        FROM 
+            AutomatischeDaten a
+        LEFT JOIN 
+            ManuelleDaten m
+        ON 
+            a.serverID = m.id
+        ";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $results = $stmt->fetchAll();
