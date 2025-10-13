@@ -72,6 +72,7 @@
         border: 10px solid var(--third);
         border-radius: 45px;
         height: 300px;
+        display: flex;
     }
 
     #currentCapacity{
@@ -82,7 +83,10 @@
         text-align: left;
     }
 
-
+    #apiChart{
+      padding: 7px;
+      align-items: center;
+    }
     
 
   /**======================SIDE GRAPH======================**/
