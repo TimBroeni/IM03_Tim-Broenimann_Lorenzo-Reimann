@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Abgerufene Daten:", data);
 
       // Zufälligen Server auswählen (Beispiel)
-      const servers = ["gommehd", "mcprohosting", "mineplex", "hypixel"];
+      const servers = ["GommeHD", "Hypixel", "Mineplex", "ManaCube"];
       const randomserver = servers[Math.floor(Math.random() * servers.length)];
       console.log(randomserver);
 
@@ -44,22 +44,20 @@ document.addEventListener("DOMContentLoaded", () => {
         new Date(item.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       ))];
 
-    
+     // Y-Achse: Spielerzahlen nur für den zufälligen Server
+const werte = data
+  .filter(item => item.nameServer === randomserver)
+  .map(item => item.spielerOnline);
 
-      // Y-Achse: Spielerzahlen
-      const datasets = serverID.map(server => {
-        const werte = data
-          .filter(item => item.nameServer === server)
-          .map(item => item.spielerOnline);
-
-        return {
-          label: `Server ${server}`,
-          data: werte,
-          fill: false,
-          borderColor: getRandomColor(),
-          tension: 0.1,
-        };
-      });
+const datasets = [{
+  label: `${randomserver}`,
+  data: werte,
+  fill: false,
+  borderColor: "white",
+  tension: 0.1,
+  fill: true,
+  backgroundColor: "rgba(165, 156, 27, 0.2)",
+}];
 
       // Chart initialisieren
       new Chart(ctx, {
@@ -74,8 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
           layout: {
             padding: { top: 10, right: 15, bottom: 10, left: 10 }
           },
+
           plugins: {
-            // legend: { position: "top" },
+            legend: { position: "none" },
             // title: { display: true, text: "Aktuelle Spielerzahlen pro Server" },
           },
           scales: {
@@ -187,3 +186,29 @@ document.addEventListener("DOMContentLoaded", () => {
 //     return color;
 //   }
 // });
+
+
+
+
+
+
+
+// Legende komplett wegnehmen:
+// scales: {
+//             x: {
+//               display: false,           // X-Achse komplett ausblenden
+//               grid: {
+//                 display: false,         // keine Gitternetzlinien
+//                 drawTicks: false,       // keine Tick-Markierungen
+//                 drawBorder: false       // keine Achsenlinie
+//               }
+//             },
+//             y: {
+//               display: false,           // Y-Achse komplett ausblenden
+//               grid: {
+//                 display: false,
+//                 drawTicks: false,
+//                 drawBorder: false
+//               }
+//             }
+//           }
