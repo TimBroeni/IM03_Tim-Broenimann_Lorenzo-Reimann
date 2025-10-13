@@ -7,13 +7,14 @@
     }
 
     header {
-      margin-top: -32vh;
-      position: relative;
-      z-index: 2;
+      position: block;
+      z-index: 1;
     }
 
     #divHeader{
       width: 100vw;
+      position: block;
+      z-index: 2;
     }
 
         #istServerAktiv{
@@ -127,16 +128,10 @@
     /**======================BACKGROUND======================**/
 
   #mobileTopBox {
-    z-index: 1;
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute;
     width: 100vw;
     background-color: #3D3938;
     z-index: -1;
     height: clamp(47px, 30vw, 1354px);
-    border-radius: 0;
-    margin: 0;
-    pointer-events: none; /* Prevents blocking interactions below */
   }
 }
