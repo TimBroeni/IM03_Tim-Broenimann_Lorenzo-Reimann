@@ -44,6 +44,11 @@
   /**======================SUBTITLE======================**/
     #aktiveSpielerOnline{
         color: var(--primary);
+        font-size: 48px;
+    }
+
+    #totaleSpielerMöglich{
+        font-size: 48px;
     }
 
     #playerCount{

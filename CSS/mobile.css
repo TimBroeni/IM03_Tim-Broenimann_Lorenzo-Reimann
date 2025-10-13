@@ -44,9 +44,8 @@
       text-align: center;
       margin: 10px 0 0 0;
       color: var(--primary);
-      font-weight: bold;
       color: white;
-      margin-bottom: 6vw;
+      margin-bottom: 2vw;
     }
 
         #logoServer{
@@ -72,7 +71,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin: 0 20px 0 20px;
+      margin: 6vw 20px 0 20px;
     }
 
   /**======================SUBTITLE======================**/

@@ -36,7 +36,6 @@ font-weight: 400;
 h2{
 color: white;
 font-family: "Noto Sans";
-font-size: 48px;
 text-align: center;
 font-weight: 700;
 }
@@ -52,7 +51,7 @@ font-weight: 700;
 h4{
 color: white;
 font-family: "Noto Sans";
-font-size: 24px;
+font-size: 3vw;
 text-align: center;
 }
 
@@ -73,7 +72,6 @@ footer{
 }
 
 header{
-  height: 30vh;
   width: 95vw;
   max-width: 1500px;
   margin: 0 auto;
