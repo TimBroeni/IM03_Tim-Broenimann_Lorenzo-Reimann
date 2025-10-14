@@ -33,7 +33,7 @@
         top: 15px;
     }
 
-        #stringServerAktivität{
+    #stringServerAktivität{
         text-align: right;
         font-size: 3vw;
         display: flex;
@@ -73,16 +73,16 @@
 
   /**======================TITLE======================**/
 
-    #servernameUndAktivität{
+  #servernameUndAktivität{
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       margin: 6vw 20px 0 20px;
-    }
+  }
 
   /**======================SUBTITLE======================**/
-    #playerCount {
+  #playerCount {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -117,12 +117,47 @@
   #mainChart{
     border: 1vw solid var(--third);
     height: clamp(200px, 50vw, 600px);
+    border-radius: 6%;
   }
 
+  #capacityPercent{
+    margin-bottom; 5vw: 
+  }
   /**======================SIDE GRAPH======================**/
 
-
-
+#BoxSideChartONE {
+  height: clamp(100px, 20vw, 500px);
+  border: 1vw solid var(--third);
+  width: clamp(250px, 60vw, 500px);
+  justify-self: center;
+  margin-bottom: 3vw;
+}
+#BoxSideChartTWO {
+  height: clamp(100px, 20vw, 500px);
+  border: 1vw solid var(--third);
+  width: clamp(250px, 60vw, 500px);
+  justify-self: center;
+  margin-bottom: 3vw;
+}
+#BoxSideChartTHREE {
+  height: clamp(100px, 20vw, 500px);
+  border: 1vw solid var(--third);
+  width: clamp(250px, 60vw, 500px);
+  justify-self: center;
+  margin-bottom: 3vw;
+}
+.titleChartSide {
+  font-size: clamp(10px, 3vw, 20px);
+  margin-left: 14vw;
+}
+.verhältnisPlayersPLUS {
+  margin-right: 15vw;
+  font-size: clamp(10px, 3vw, 20px);
+}
+.verhältnisPlayersMINUS {
+  margin-right: 15vw;
+   font-size: clamp(10px, 3vw, 20px);
+}
   /**======================FOOTER======================**/
 
   /**======================BACKGROUND======================**/
