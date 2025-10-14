@@ -56,7 +56,7 @@ const datasets = [{
   borderColor: "white",
   tension: 0.1,
   fill: true,
-  backgroundColor: "rgba(165, 156, 27, 0.2)",
+    backgroundColor: "#52A535",
 }];
 
       // Chart initialisieren
