@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Zufälligen Server auswählen
       const servers = ["GommeHD", "Hypixel", "Mineplex", "ManaCube"];
       const randomserver = servers[Math.floor(Math.random() * servers.length)];
-      console.log("Gewählter Server:", randomserver);
+      console.log("Angezeigter Server:", randomserver);
 
       // Canvas im HTML abrufen
       const canvas = document.getElementById("apiChart");
@@ -160,6 +160,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const randomserver = servers[Math.floor(Math.random() * servers.length)];
       console.log("Gewählter Server:", randomserver);
 
+// Titel im HTML setzen
+const titleElement = document.getElementById("servername");
+if (titleElement) {
+  titleElement.textContent = randomserver; // Setzt den Text im HTML
+}
+
       // Canvas im HTML abrufen
       const canvas = document.getElementById("sideChartONE");
       if (!canvas) {
@@ -261,24 +267,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+/*   ===================================SIDE CHART 2========================================= */
 
-
-// Legende komplett wegnehmen:
-// scales: {
-//             x: {
-//               display: false,           // X-Achse komplett ausblenden
-//               grid: {
-//                 display: false,         // keine Gitternetzlinien
-//                 drawTicks: false,       // keine Tick-Markierungen
-//                 drawBorder: false       // keine Achsenlinie
-//               }
-//             },
-//             y: {
-//               display: false,           // Y-Achse komplett ausblenden
-//               grid: {
-//                 display: false,
-//                 drawTicks: false,
-//                 drawBorder: false
-//               }
-//             }
-//           }
+/*   ===================================TITLE SETZEN========================================= */
