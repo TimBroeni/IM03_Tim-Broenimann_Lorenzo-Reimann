@@ -51,9 +51,9 @@
         font-size: 48px;
     }
 
-    #playerCount{
-        display: flex;
-        align-items: center;
+    #playercount{
+        margin: auto;
+        font-size: 48px;
     }
 
   /**======================GRAPH======================**/

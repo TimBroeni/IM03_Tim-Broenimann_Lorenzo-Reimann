@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
       // Canvas im HTML abrufen
-      const canvas = document.getElementById("apiChart");
+      const canvas = document.getElementById("mainChart");
       if (!canvas) {
-        console.error("Fehler: Kein <canvas id='apiChart'> im HTML gefunden!");
+        console.error("Fehler: Kein <canvas id='mainChart'> im HTML gefunden!");
         return;
       }
       const ctx = canvas.getContext("2d");
