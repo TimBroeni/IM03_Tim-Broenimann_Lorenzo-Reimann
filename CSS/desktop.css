@@ -68,7 +68,7 @@
         margin: 70px auto 0px;
     }
   
-    #mainChart{
+    #BoxMainChart{
         border: 10px solid var(--third);
         border-radius: 45px;
         height: 300px;
