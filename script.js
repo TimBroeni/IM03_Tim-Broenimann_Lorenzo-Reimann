@@ -10,7 +10,7 @@ function floorToHour(date) {
 /*   ===================================MAIN CHART========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "http://im03.tim-broenimann.ch/unload.php";
+  const apiUrl = "https://im03.tim-broenimann.ch/unload.php";
 
   fetch(apiUrl)
     .then((response) => response.json())
@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const servers = ["GommeHD", "Hypixel", "Mineplex", "ManaCube"];
       const randomserver = servers[Math.floor(Math.random() * servers.length)];
       console.log("Angezeigter Server:", randomserver);
+      let aktiverServer = randomserver;
+
+                // Titel im HTML setzen
+                const titleElement = document.getElementById("servername");
+                if (titleElement) {
+                  titleElement.textContent = aktiverServer; // Setzt den Text im HTML
+                }
 
       // Canvas im HTML abrufen
       const canvas = document.getElementById("apiChart");
@@ -124,16 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
               },
               ticks: { 
                 color: 'white' 
-              },
-              // title: {
-              //   display: true,
-              //   text: 'Time',
-              //   color: 'white',
-              //   font: {
-              //     size: 14,
-              //     fontFamily: 'noto-sans, sans-serif',
-              //   },
-              // },              
+              },           
             }
           },
         },
@@ -148,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*   ===================================SIDE CHART========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "http://im03.tim-broenimann.ch/unload.php";
+  const apiUrl = "https://im03.tim-broenimann.ch/unload.php";
 
   fetch(apiUrl)
     .then((response) => response.json())
@@ -158,13 +156,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Zufälligen Server auswählen
       const servers = ["GommeHD", "Hypixel", "Mineplex", "ManaCube"];
       const randomserver = servers[Math.floor(Math.random() * servers.length)];
-      console.log("Gewählter Server:", randomserver);
+      console.log("Angezeigter Server:", randomserver);
 
-// Titel im HTML setzen
-const titleElement = document.getElementById("servername");
-if (titleElement) {
-  titleElement.textContent = randomserver; // Setzt den Text im HTML
-}
+                // Titel im HTML setzen
+                const titleElement = document.getElementById("servername");
+                if (titleElement) {
+                  titleElement.textContent = aktiverServer; // Setzt den Text im HTML
+                }
 
       // Canvas im HTML abrufen
       const canvas = document.getElementById("sideChartONE");
@@ -218,7 +216,7 @@ if (titleElement) {
         data: werte,
         fill: true,                 
         borderColor: "white",
-        tension: 0.1,
+        tension: 0.5,
         backgroundColor: gradient,
         borderWidth: 1.3,
         pointRadius: 0, // Punkte auf der Linie ausblenden
