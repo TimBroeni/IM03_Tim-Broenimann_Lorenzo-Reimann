@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Instanz speichern
         chartInstances.set(canvasId, chart);
-        /*   ===================================PLAYERCOUNT========================================= */
+/*   ===================================PLAYERCOUNT========================================= */
 
         //PlayerCount im Header aktualisieren
 
@@ -265,13 +265,26 @@ document.addEventListener("DOMContentLoaded", () => {
             <span style="color:#52A535; font-weight:bold;">${currentPlayers}</span>
             <span style="color:#fff;"> / ${maxPlayers}</span>
           `;
+        
+        
 
-
+        }
+/*   ===================================FOOTER BESCHREIBUNG========================================= */
+        if (selectedMode === "main") {
+          const footerAktivitaet = currentPlayers;
+          const aktivitaetTief = 1000
+          const aktivitaetHoch = 5000
+          const footerAktivitaetElement = document.getElementById("footerAktivitaet");
+          if (footerAktivitaet >= aktivitaetHoch) {
+            footerAktivitaetElement.innerHTML = "Here is the party, lots of players online!";
+          } else if (footerAktivitaet < aktivitaetHoch && footerAktivitaet >= aktivitaetTief) {
+            footerAktivitaetElement.innerHTML = "Something's going on, people are playing...";
+          } else {
+            footerAktivitaetElement.innerHTML = "Nothing's going on here...";
+          }
         }
 
       }
-
-      console.log(chartInstances);
 
 
 
