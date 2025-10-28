@@ -162,6 +162,23 @@
   margin-right: 15vw;
    font-size: clamp(10px, 3vw, 20px);
 }
+
+#graphenSideBackgroundBox{
+    position: absolute;
+    width: 100vw;
+    background-color: #3D3938;
+    z-index: -1;
+    height: clamp(425px, 88vw, 899px);
+    top: 65vh;
+}
+/**======================SEITENENDE======================**/
+#Illustrationseitenende{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
   /**======================FOOTER======================**/
 
   /**======================BACKGROUND======================**/
