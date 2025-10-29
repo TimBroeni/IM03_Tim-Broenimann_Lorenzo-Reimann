@@ -41,6 +41,15 @@
 
 
                 <div id="mainPart">
+                    <div id="timeRangeSelector">
+                        <label for="timeRange" style="color:white;">Zeitraum: </label>
+                        <select id="timeRange">
+                            <option value="24h">Letzte 24 Stunden</option>
+                            <option value="7d">Letzte 7 Tage</option>
+                            <option value="30d">Letzter Monat</option>
+                        </select>
+                    </div>
+
                     <div id="BoxMainChart">
                         <canvas id="mainChart"></canvas>
                     </div>

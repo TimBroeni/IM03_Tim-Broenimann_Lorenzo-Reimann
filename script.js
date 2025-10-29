@@ -2,12 +2,26 @@
 
   const servers = ["GommeHD", "Hypixel", "Mineplex", "ManaCube"];
 
+  // Cash initialisieren
+  let cachedData = null;
+
+  // Standard Zeitspanne für die Anzeige der Daten
+  let selectedTimeRange = "24h";
+
+
   const chartInstances = new Map();
 
-// Funktion, um Uhrzeit auf die volle Stunde zu runden
-function floorToHour(date) {
+  // Funktion, um Datum auf das nächste Intervall zu runden
+function floorToInterval(date, range) {
   const d = new Date(date);
-  d.setMinutes(0, 0, 0);
+  if (range === "7d") {
+    d.setMinutes(0, 0, 0);
+    d.setHours(Math.floor(d.getHours() / 6) * 6); // alle 6 Stunden
+  } else if (range === "30d") {
+    d.setHours(0, 0, 0, 0); // auf Tagesbeginn runden
+  } else {
+    d.setMinutes(0, 0, 0); // 24h-Modus → auf volle Stunde
+  }
   return d;
 }
 
@@ -19,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      //console.log("Abgerufene Daten:", data);
 
       // Zufälligen Server auswählen
       const randomserver = servers[Math.floor(Math.random() * servers.length)];
@@ -27,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
       displayServers(randomserver);
 
       
+
+
+
+
 
       /* ===================================DISPLAY SERVER FUNKTION========================================= */
 
@@ -176,7 +193,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // Daten für den gewählten Server filtern und nach Zeit sortieren
         const serverData = data
           .filter(item => item.nameServer === serverName)
-          .filter(item => new Date(item.timestamp) >= new Date(Date.now() - 24 * 60 * 60 * 1000)) // nur die letzten 24 Stunden
+          .filter(item => {
+            let rangeMillis;
+            switch (selectedTimeRange) {
+              case "7d":
+                rangeMillis = 7 * 24 * 60 * 60 * 1000; // 7 Tage
+                break;
+              case "30d":
+                rangeMillis = 30 * 24 * 60 * 60 * 1000; // 30 Tage
+                break;
+              default:
+                rangeMillis = 24 * 60 * 60 * 1000; // 24h
+            }
+            return new Date(item.timestamp) >= new Date(Date.now() - rangeMillis);
+          })
           .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
 
 
@@ -185,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const seenHours = new Set();
 
         for (const entry of serverData) {
-          const date = floorToHour(entry.timestamp); //rundet die Stunden ab
+          const date = floorToInterval(entry.timestamp, selectedTimeRange);
           const hourKey = date.getTime(); // eindeutiger Schlüssel für die Stunde
 
           if (!seenHours.has(hourKey)) {
@@ -199,9 +229,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // X-Achse + Y-Achse definieren
-        const labels = hourlyData.map(item =>
-          new Date(item.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        );
+        const labels = hourlyData.map(item => {
+          const d = new Date(item.timestamp);
+          if (selectedTimeRange === "30d") {
+            return d.toLocaleDateString([], { day: '2-digit', month: '2-digit' });
+          } else if (selectedTimeRange === "7d") {
+            return d.toLocaleString([], { weekday: 'short', hour: '2-digit' });
+          } else {
+            return d.toLocaleTimeString([], { hour: '2-digit' });
+          }
+        });
         const werte = hourlyData.map(item => item.spielerOnline);
         const werteMax = hourlyData.map(item => item.spielerMax);
 
@@ -240,12 +277,11 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             layout: selectedDesign.layout
           },
-
-
         });
 
         // Instanz speichern
         chartInstances.set(canvasId, chart);
+
 /*   ===================================PLAYERCOUNT========================================= */
 
         //PlayerCount im Header aktualisieren
@@ -278,8 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
 
-
-
 /*   ===================================FOOTER BESCHREIBUNG========================================= */
         if (selectedMode === "main") {
           const footerAktivitaet = currentPlayers;
@@ -294,6 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
             footerAktivitaetElement.innerHTML = "Nothing's going on here...";
           }
         }
+
 /*  ===================================CURRENT CAPACITY========================================= */
         if (selectedMode === "main") {
           const currentCapacity = ((currentPlayers / maxPlayers) * 100).toFixed(1);
@@ -301,11 +336,18 @@ document.addEventListener("DOMContentLoaded", () => {
           capacityElement.textContent = `${currentCapacity}%`;
         }
 
-/*  ===================================ONLINESTATUS SERVER========================================= */
-       
+/*  ===================================TIME RANGE========================================= */
+      document.getElementById("timeRange").addEventListener("change", (e) => {
+        selectedTimeRange = e.target.value;
+        // Aktuellen Hauptserver neu anzeigen
+        const currentServer = document.getElementById("servername").textContent;
+        displayServers(currentServer);
+      });
 
       }
     })
+
+
     .catch((error) => console.error("Fetch-Fehler:", error));
 });
 
