@@ -265,10 +265,21 @@ document.addEventListener("DOMContentLoaded", () => {
             <span style="color:#52A535; font-weight:bold;">${currentPlayers}</span>
             <span style="color:#fff;"> / ${maxPlayers}</span>
           `;
-        
-        
-
         }
+
+/*   ===================================SERVER AKTIVITÄT========================================= */        
+        if (selectedMode === "main") {
+          const latestEntry = serverData[serverData.length - 1];
+          const statusServer = latestEntry && latestEntry.statusServer ? latestEntry.statusServer : "Unknown";
+
+          const statusElement = document.getElementById("stringServerAktivität");
+          if (statusElement) {
+            statusElement.textContent = `${statusServer}`;
+          }
+        }
+
+
+
 /*   ===================================FOOTER BESCHREIBUNG========================================= */
         if (selectedMode === "main") {
           const footerAktivitaet = currentPlayers;
@@ -283,12 +294,21 @@ document.addEventListener("DOMContentLoaded", () => {
             footerAktivitaetElement.innerHTML = "Nothing's going on here...";
           }
         }
+/*  ===================================CURRENT CAPACITY========================================= */
+        if (selectedMode === "main") {
+          const currentCapacity = ((currentPlayers / maxPlayers) * 100).toFixed(1);
+          const capacityElement = document.getElementById("capacityPercent");
+          capacityElement.textContent = `${currentCapacity}%`;
+        }
+
+/*  ===================================ONLINESTATUS SERVER========================================= */
+       
 
       }
-
-
-
     })
     .catch((error) => console.error("Fetch-Fehler:", error));
 });
+
+
+
 
