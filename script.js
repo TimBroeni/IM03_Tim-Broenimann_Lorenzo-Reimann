@@ -312,6 +312,16 @@ document.addEventListener("DOMContentLoaded", () => {
           if (statusElement) {
             statusElement.textContent = `${statusServer}`;
           }
+
+          // Bild der Serveraktivität anpassen
+          const statusImage = document.getElementById("imgServerAktivität");
+          if (statusImage) {
+            if (statusServer.toLowerCase() === "offline") {
+              statusImage.src = "images/Redstone_Block.svg";
+            } else {
+              statusImage.src = "images/Emerald_Block.svg";
+            }
+          }
         }
 
 /*   ===================================FOOTER BESCHREIBUNG========================================= */
@@ -322,6 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const footerAktivitaetElement = document.getElementById("footerAktivitaet");
           if (footerAktivitaet >= aktivitaetHoch) {
             footerAktivitaetElement.innerHTML = "Here is the party, lots of players online!";
+            //source von html ist ein anderes bild
           } else if (footerAktivitaet < aktivitaetHoch && footerAktivitaet >= aktivitaetTief) {
             footerAktivitaetElement.innerHTML = "Something's going on, people are playing...";
           } else {
@@ -331,10 +342,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*  ===================================CURRENT CAPACITY========================================= */
         if (selectedMode === "main") {
-          const currentCapacity = ((currentPlayers / maxPlayers) * 100).toFixed(1);
           const capacityElement = document.getElementById("capacityPercent");
-          capacityElement.textContent = `${currentCapacity}%`;
+
+          // Prüfen, ob Werte gültig sind
+          if (maxPlayers === 0 || currentPlayers === 0) {
+            capacityElement.textContent = "Offline";
+          } else {
+            const currentCapacity = ((currentPlayers / maxPlayers) * 100).toFixed(1);
+            capacityElement.textContent = `${currentCapacity}%`;
+          }
         }
+
 
 /*  ===================================TIME RANGE========================================= */
       document.getElementById("timeRange").addEventListener("change", (e) => {
