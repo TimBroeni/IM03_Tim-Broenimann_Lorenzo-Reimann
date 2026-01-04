@@ -187,12 +187,21 @@ h4{
     display: flex;
     margin-top: 10vw;
     margin-bottom: 10vw;
+    
 }
   /**======================FOOTER======================**/
 
+  /* So Bringsch d'Figur ganz abe: */
+
+    #img_playerLevel{
+      position: absolute;
+      top: 2200px;
+      width: 105%
+
+
   /**======================BACKGROUND======================**/
 
-  #mobileTopBox {
+  #mobileTopBox{
     position: absolute;
     width: 100vw;
     background-color: #3D3938;

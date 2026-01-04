@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentServer = document.getElementById("servername").textContent;
         displayServers(currentServer);
 
-      });
+        });
 
 /*  ===================================LOGO SERVER========================================= */
         if (selectedMode === "main") {
@@ -372,10 +372,55 @@ document.addEventListener("DOMContentLoaded", () => {
           if (!logoElement) return; // Absicherung
             logoElement.src = `images/Logo_${serverName}.png`;
         }
+
+/*  ===================================VERHÄLTNIS PLAYERS SIDE <-> MAIN========================================= */
+        if (selectedMode === "main") {
+
+
+          function getCurrentPlayers(serverName) {
+            const serverEntries = data
+              .filter(item => item.nameServer === serverName)
+              .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+            return serverEntries.length
+              ? serverEntries[serverEntries.length - 1].spielerOnline
+              : null;
+          }
+
+          const mainPlayers = getCurrentPlayers(serverName);
+          if (mainPlayers === null) return;
+
+          const sideServers = servers.filter(s => s !== serverName);
+          const idMap = ["ONE", "TWO", "THREE"];
+
+          sideServers.forEach((sideServer, index) => {
+            const sidePlayers = getCurrentPlayers(sideServer);
+            if (sidePlayers === null) return;
+
+            const diff = sidePlayers - mainPlayers;
+            const target = document.getElementById(`verhältnisPlayers${idMap[index]}`);
+            if (!target) return;
+
+            if (diff > 0) {
+              target.textContent = `+${diff}`;
+              target.style.color = "#3C8526";
+            } 
+            else if (diff < 0) {
+              target.textContent = diff;
+              target.style.color = "#FF0000"
+            } 
+            else {
+              target.textContent = "0";
+              target.style.color = "grey";
+            }
+          });
+        }
+
+
+
+
+
       }
     })
-
-
-
     .catch((error) => console.error("Fetch-Fehler:", error));
 });
