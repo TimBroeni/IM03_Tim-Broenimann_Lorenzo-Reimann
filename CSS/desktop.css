@@ -16,7 +16,8 @@
 
     @media (max-width: 1500px){
       #logoServer{
-        width: 100px;
+        width: 15vw;
+        object-fit: contain;
         margin-top: 60px;
       }
 
@@ -160,8 +161,6 @@
 
   /**======================FOOTER======================**/
     
-  
-
   #inhaltFooter{
         margin-top: 25px;
     }
@@ -171,5 +170,8 @@
   }
   
   
-
   /**======================BACKGROUND======================**/
+
+  #img_playerLevel{
+      width: 100%;
+  }

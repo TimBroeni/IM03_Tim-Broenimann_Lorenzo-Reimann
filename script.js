@@ -180,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
           const titleElement = document.getElementById("servername");
           if (titleElement) {
             titleElement.textContent = serverName;
-            // console.log("Titel-Element gefunden und gesetzt:", serverName);
           }
         }
 
@@ -324,19 +323,23 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
 
-/*   ===================================FOOTER BESCHREIBUNG========================================= */
+/*   ===================================FOOTER BESCHREIBUNG + BILD========================================= */
         if (selectedMode === "main") {
           const footerAktivitaet = currentPlayers;
           const aktivitaetTief = 1000
           const aktivitaetHoch = 5000
           const footerAktivitaetElement = document.getElementById("footerAktivitaet");
+          const footerAktivitaetBild = document.getElementById("img_playerLevel");
+
           if (footerAktivitaet >= aktivitaetHoch) {
             footerAktivitaetElement.innerHTML = "Here is the party, lots of players online!";
-            //source von html ist ein anderes bild
+            footerAktivitaetBild.src = "images/img_players_hoch.png";
           } else if (footerAktivitaet < aktivitaetHoch && footerAktivitaet >= aktivitaetTief) {
             footerAktivitaetElement.innerHTML = "Something's going on, people are playing...";
+            footerAktivitaetBild.src = "images/img_players_mittel.png";
           } else {
             footerAktivitaetElement.innerHTML = "Nothing's going on here...";
+            footerAktivitaetBild.src = "images/img_players_tief.png";
           }
         }
 
@@ -355,20 +358,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /*  ===================================TIME RANGE========================================= */
-      document.getElementById("timeRange").addEventListener("change", (e) => {
+        document.getElementById("timeRange").addEventListener("change", (e) => {
         selectedTimeRange = e.target.value;
         // Aktuellen Hauptserver neu anzeigen
         const currentServer = document.getElementById("servername").textContent;
         displayServers(currentServer);
       });
 
+/*  ===================================LOGO SERVER========================================= */
+        if (selectedMode === "main") {
+          const logoElement = document.getElementById("logoServer");
+          if (!logoElement) return; // Absicherung
+            logoElement.src = `images/Logo_${serverName}.png`;
+        }
       }
     })
 
 
+
     .catch((error) => console.error("Fetch-Fehler:", error));
 });
-
-
-
-
