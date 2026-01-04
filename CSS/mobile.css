@@ -98,6 +98,10 @@
   /* This ensures it stays in normal flow beneath #header */
 }
 
+h4{
+  font-size: clamp(6px, 3vw, 24px);
+}
+
     #aktiveSpielerOnline{
         font-size: 6vw;
     }

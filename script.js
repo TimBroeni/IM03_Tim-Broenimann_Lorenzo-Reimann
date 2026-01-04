@@ -363,6 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Aktuellen Hauptserver neu anzeigen
         const currentServer = document.getElementById("servername").textContent;
         displayServers(currentServer);
+
       });
 
 /*  ===================================LOGO SERVER========================================= */

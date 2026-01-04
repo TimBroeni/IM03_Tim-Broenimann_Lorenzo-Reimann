@@ -29,7 +29,7 @@ color: white;
 text-align: center;
 font-family: MinecraftFont;
 font-weight: 400;
-font-size: clamp(90px, 12vh, 140px);
+font-size: clamp(90px, 12vh, 130px);
 }
 
 
@@ -54,7 +54,6 @@ font-weight: 700;
 h4{
 color: white;
 font-family: "Noto Sans";
-font-size: clamp( 6px, 3vw, 24px);
 text-align: center;
 }
 
@@ -68,8 +67,6 @@ text-align: center;
 
 footer{
     background-color: var(--shade);
-    /* height: 75px; */
-    height: 8vh;
     width: 100%;
 
 }
@@ -84,5 +81,5 @@ main {
   width: 95vw;
   max-width: 1500px;
   margin: 0 auto;
-  height: 62vh;
+  /* height: 62vh; */
 }

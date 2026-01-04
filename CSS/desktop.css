@@ -33,13 +33,17 @@
     }
 
     #imgServerAktivität{
-      height: 68px;
+      height: 60px;
     }
 
 
   /**======================TITLE======================**/
     h1{
-        margin: 40px 0 20px;
+        margin: 40px 0 0
+    }
+
+    h4{
+      font-size: clamp(18px, 3vh, 24px);
     }
 
   /**======================SUBTITLE======================**/
@@ -54,14 +58,27 @@
 
     #playercount{
         margin: auto;
-        font-size: 48px;
+        font-size: clamp(32px , 5vh, 48px);
     }
 
   /**======================GRAPH======================**/
+    label[for="timeRange"] {
+      color: white;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    #timeRangeSelector{
+      margin-bottom: 5px;
+    }
+  
+  
     #graphenTotal{
         display: grid;
         grid-template-columns: 22% 46% 22%;
         gap: 5%;
+        margin-bottom: 90px;
   } 
   
     #mainPart{
@@ -91,9 +108,9 @@
     
 
   /**======================SIDE GRAPH======================**/
-    #graphenTotal{
+    /* #graphenTotal{
       margin-bottom: 50px;
-    }
+    } */
   
     #graphenSide{
         display: flex;
@@ -131,10 +148,6 @@
       justify-self: end;
     }
 
-    #sideChartONE{
-  
-    }
-
     #TotalSideChartTWO{
       margin-top: clamp(10px, 1vh, 50px);
     }
@@ -145,10 +158,6 @@
       height: clamp(80px, 10vh, 120px);
       width: 100%;
       justify-self: end;
-    }
-
-    #sideChartTWO{
-
     }
 
     #TotalSideChartTHREE{
@@ -163,10 +172,6 @@
       justify-self: end;
     }
 
-    #sideChartTHREE{
-
-    }
-
   /**======================FOOTER======================**/
     
   #inhaltFooter{
@@ -174,15 +179,20 @@
     }
 
   #footerAktivitaet{
-    padding-top: 25px;
+    padding-top: 40px;
+  }
+
+  footer{
+    height: 101px;
+    
   }
   
   
   /**======================BACKGROUND======================**/
 
   #img_playerLevel{
-      padding: 30px 0 ;
       position: relative;
-      margin-top: 5vh;
-      height: 100px;
+      top: clamp(-50px, 25vh, 240px);
+      width: 105%
+      
   }
