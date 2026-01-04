@@ -172,13 +172,22 @@ h4{
    font-size: clamp(10px, 3vw, 20px);
 }
 
-#graphenSideBackgroundBox{
+#graphenSide{
+  background-color: #3D3938;
+}
+
+
+/*#graphenSideBackgroundBox{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     width: 100vw;
     background-color: #3D3938;
     z-index: -1;
+    height: 88vw;
     height: clamp(425px, 88vw, 899px);
-    top: 65vh;
+    top: 65vh;*/
+  
 }
 /**======================SEITENENDE======================**/
 #Illustrationseitenende{
