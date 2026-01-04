@@ -28,9 +28,12 @@ h1 {
 color: white;
 text-align: center;
 font-family: MinecraftFont;
-font-size: clamp(42px, 9vw, 120px);
 font-weight: 400;
+font-size: clamp(90px, 12vh, 140px);
 }
+
+
+
 
 
 h2{

@@ -1,4 +1,9 @@
 @media (max-width: 1024px) { 
+  h1{
+    font-size: clamp(42px, 9vw, 120px);
+  }
+  
+  
   /**======================HEADER======================**/
       #header{
       display: flex;
