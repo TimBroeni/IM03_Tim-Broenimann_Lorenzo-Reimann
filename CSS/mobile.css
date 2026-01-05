@@ -14,7 +14,6 @@
     header {
       position: block;
       z-index: 1;
-      background-color: blue;
     }
 
     #divHeader{
@@ -75,10 +74,7 @@
       flex: 1;
     }
   
-
-
   /**======================TITLE======================**/
-
   #servernameUndAktivität{
       display: flex;
       flex-direction: row;
@@ -96,7 +92,6 @@
   align-items: center;
   margin: 5vw 0 5vw 0;
   margin-top: 6vw;
-  /* This ensures it stays in normal flow beneath #header */
 }
 
 h4{
@@ -124,6 +119,7 @@ h4{
     }
   /**======================GRAPH======================**/
     #graphenTotal{
+      position: relative;
       display: block;
       margin: 0 3vw;
   }
@@ -138,7 +134,6 @@ h4{
     margin-bottom: 10vw;
   }
   /**======================SIDE GRAPH======================**/
-
 #BoxSideChartONE {
   height: clamp(100px, 20vw, 500px);
   border: 1vw solid var(--third);
@@ -176,22 +171,12 @@ h4{
 #graphenSide{
   background-color: #3D3938;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 40vh;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  border-radius: 4%;
 }
 
-
-/*#graphenSideBackgroundBox{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100vw;
-    background-color: #3D3938;
-    z-index: -1;
-    height: 88vw;
-    height: clamp(425px, 88vw, 899px);
-    top: 65vh;*/
-  
-}
 /**======================SEITENENDE======================**/
 #Illustrationseitenende{
     position: relative;
@@ -199,21 +184,21 @@ h4{
     display: flex;
     margin-top: 10vw;
     margin-bottom: 10vw;
-    
 }
+
   /**======================FOOTER======================**/
-
-  /* So Bringsch d'Figur ganz abe: */
-
-    #img_playerLevel{
+  #img_playerLevel{
       position: absolute;
-      top: 2200px;
-      width: 105%
-      }
-
+      z-index: 21;
+      bottom: -403px;
+      left: -62px;
+      width: 97vw;
+      max-width: 351px;
+      height: auto;
+      top: auto;
+    }
 
   /**======================BACKGROUND======================**/
-
   #mobileTopBox{
     position: absolute;
     width: 100vw;
@@ -222,3 +207,4 @@ h4{
     height: clamp(47px, 30vw, 1354px);
   }
 
+}
