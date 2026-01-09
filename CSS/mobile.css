@@ -190,11 +190,11 @@ h4{
   #img_playerLevel{
       position: absolute;
       z-index: 21;
-      bottom: -403px;
-      left: -62px;
-      width: 97vw;
-      max-width: 351px;
-      height: auto;
+      bottom: -44vh;
+      left: auto;
+      width: 65vw;
+      max-width: 297px;
+        /* height: auto; */
       top: auto;
     }
 

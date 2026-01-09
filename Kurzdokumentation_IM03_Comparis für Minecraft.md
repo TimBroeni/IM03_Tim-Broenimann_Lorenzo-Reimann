@@ -16,7 +16,7 @@
         vertiefen und weiter ausbauen. 
         Ausserdem habe ich mit den Wiederholungen auch langsam das Gefühl, dass ich mich mehr oder weniger gut mit GitHub auskenne. Diesbezüglich fand ich es auch spannend, was genau ein gitignore ist und warum man dies braucht.
 
-        - JS fiel mir immernoch sehr schwer. Letztes Semester hat sich mein Partner um JS gekümmert, dementsprechend musste ich vieles  aufholen. Grundsätzlich würde ich sagen, dass ich verstehe, was genau passiert. Sprich ich habe gelernt, den Text zu lesen. (Mehr bei "Schwierigkeitn") 
+        - JS fiel mir immernoch sehr schwer. Letztes Semester hat sich mein Partner um JS gekümmert, dementsprechend musste ich vieles aufholen. Grundsätzlich würde ich sagen, dass ich verstehe, was genau passiert. Sprich ich habe gelernt, den Text zu lesen. (Mehr bei "Schwierigkeitn") 
 
         - ChartJS ist sehr toll und umfangreich. Dass man alles anpassen kann hat Spass gemacht, sei es die Darstellung oder der Inhalt. So konnten wir es genau so darstellen wie im Figma angedacht.
 
@@ -29,9 +29,12 @@
         - Schlussendlich fand ich es interessant so ein Projekt umzusetzen. Je nach Thema oder API kann so eine kleine Webseite mit dargestellten Daten sehr cool und passend für den Alltag sein. Es ist cool zu wissen, wie es funktioniert, falls sich irgendwann einmal eine nützliche Situation ergibt.
 
     Lorenzo:
-        - 
-        - 
-        - 
+        - Unser erstes Ziel war es in kurzer Zeit ein optisch ansprechendes und funktionelles Mockup zu erstellen das als Referenz dienen soll. Das war zwar bereits in mehreren Fächern der Auftrag, aber hier ging es darum das Meiste aus den Daten einer vorgegebenen API rauszuholen und optisch wie auch funktionell wiederzugeben. Das Ganze sollte zudem zum Thema Mincraft passen, ein Videospiel, dass mich seit meiner Kindheit stets begeistert hat.
+
+        - Zu Beginn (in der Desktop Version) haben wir viel mit festen Grössenangaben in Pixeln gearbeitet, was sich schnell als ungünstig für die Mobile Adaptierung herausstellte.
+        Die Anpassung und Änderung dieser Werte hat mir ein tieferes Verständnis für HTML, CSS und insbesondere der Arbeitsweise mit Media Queries gegeben.
+
+        - Beim Deployment stiessen wir auf anhaltende Synchronisationsprobleme. Wir vermuteten den Fehler zunächst bei GitHub, erkannten jedoch später, dass Browser-Caching sowie die SFTP-Konfiguration ursächlich waren, weshalb die Änderungen auf dem Server nicht unmittelbar übernommen wurden.
 
 <!-- Schwierigkeiten: -->
     - Das "Untersuchen" Tool vom Browser ist genial, wenn es um Arbeiten für HTML und CSS geht. Allerdings hat es uns ein wenig gestört für die JS-Arbeit, denn wenn ein Fehler aufgekommen ist, wird einem einfach gar nichts mehr angezeigt. Dies machte es uns extrem schwierig, die gemachten Fehler zu erkennen und effizient auszumerzen. 
